@@ -1,0 +1,20 @@
+.sugg-list {
+  padding: 0 10px;
+  .sugg-item {
+    font-size: 24px;
+    padding: 26px 0;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .goods-name {
+      // 文字不允许换行
+      white-space: nowrap;
+      // 溢出部分隐藏
+      overflow: hidden;
+      // 文本溢出后，使用...代替
+      text-overflow: ellipsis;
+      margin-right: 6px;
+    }
+  }
+}

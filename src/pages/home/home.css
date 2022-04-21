@@ -1,0 +1,41 @@
+.search-box {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.swiper {
+  height: 330px;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.nav-list .nav-img {
+  width: 128px;
+  height: 140px;
+}
+
+.floor-title-img {
+  width: 100%;
+  height: 60px;
+}
+
+.right-img-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.floor-img-box {
+  display: flex;
+  padding-left: 10px;
+}

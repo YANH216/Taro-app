@@ -1,0 +1,37 @@
+.history-box {
+  .history-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+  }
+  .history-list {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .search-history-text {
+      max-width: 200px;
+      background-color: #efefef;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 50px;
+      // 文字不允许换行
+      white-space: nowrap;
+      // 溢出部分隐藏
+      overflow: hidden;
+      // 文本溢出后，使用...代替
+      text-overflow: ellipsis;
+    }
+  }
+  .history-clear {
+    width: 50%;
+    background-color: #efefef;
+    padding: 10px;
+    margin: auto;
+    border-radius: 50px;
+    text-align: center;
+  }
+}
