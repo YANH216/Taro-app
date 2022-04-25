@@ -1,16 +1,19 @@
 import { View } from '@tarojs/components'
-import { useReady } from '@tarojs/taro'
-import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { selectToken } from '../../redux/feature/userSlice'
+import Login from '../../components/login/login'
+import UserInfo from '../../components/userInfo/userInfo'
 
-function My () {  
-  const [msg, setMsg] = useState('page my')
-
-  useReady(() => {
-    console.log('onReady(useReady)'); 
-  })
-  
+function My () {
+  const token = useSelector(selectToken)
   return (
-    <View>{ msg }</View>
+    <View>
+      {
+        token 
+        ? <UserInfo></UserInfo>
+        : <Login></Login>
+      }
+    </View>
   )
 }
 

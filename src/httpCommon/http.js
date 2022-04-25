@@ -14,7 +14,7 @@ class HttpRequest {
     } 
   */
 
-    const BASE_URL = 'https://api-hmugo-web.itheima.net'
+    const BASE_URL = 'http://api-hmugo-web.itheima.net'
 
     return new Promise((resolve, reject) => {
       Taro.request({

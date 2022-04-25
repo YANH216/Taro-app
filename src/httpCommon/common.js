@@ -15,7 +15,9 @@ const URL = {
   // 商品列表搜索
   goodsList: '/api/public/v1/goods/search',
   // 商品详情
-  goodsDetail: '/api/public/v1/goods/detail'
+  goodsDetail: '/api/public/v1/goods/detail',
+  // 获取token
+  token: '/api/public/v1/users/wxlogin',
 
 }
 
@@ -43,6 +45,9 @@ class Common extends HttpRequest {
   }
   getGoodsDetail({ goods_id }) {
     return this.get(URL.goodsDetail, { goods_id })
+  }
+  getToken({ query }) {
+    return this.post(URL.token, { query })
   }
 }
 
