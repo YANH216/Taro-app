@@ -20,6 +20,14 @@
   margin-right: 10px;
 }
 
+.goods-nav-container .shop .shop-icon .iconfont {
+  font-size: 48px;
+}
+
+.goods-nav-container .shop .shop-title {
+  font-size: 24px;
+}
+
 .goods-nav-container .cart {
   width: 15%;
   height: 90px;
@@ -29,6 +37,10 @@
   justify-content: center;
   margin-right: 10px;
   position: relative;
+}
+
+.goods-nav-container .cart .cart-icon .iconfont {
+  font-size: 48px;
 }
 
 .goods-nav-container .cart .cart-sign {
@@ -43,6 +55,10 @@
   text-align: center;
   line-height: 30px;
   border-radius: 50%;
+}
+
+.goods-nav-container .cart .cart-title {
+  font-size: 24px;
 }
 
 .goods-nav-container .btn-group {

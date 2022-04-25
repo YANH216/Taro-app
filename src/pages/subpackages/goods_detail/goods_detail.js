@@ -21,7 +21,7 @@ import { saveTotal } from '../../../redux/feature/totalSlice'
 import GoodsNav from '../../../components/goodsNav/goodsNav'
 import common from '../../../httpCommon/common'
 import _showToast from '../../../util/_showToast'
-import './goods_detail.scss'
+import './style/goods_detail.scss'
 
 function Goods_Detail () { 
 

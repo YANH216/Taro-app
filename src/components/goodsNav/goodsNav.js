@@ -9,8 +9,9 @@ import { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 // import store from '../../redux/store/store'  // 第一想法
 import { addToCart } from '../../redux/feature/cartListSlice'
-import './goodsNav.scss'
 import { selectTotal } from '../../redux/feature/totalSlice'
+import '../../resource/iconfont/iconfont.css'
+import './style/goodsNav.scss'
 
 
 function GoodsNav ({goodsDetail}) {  
@@ -73,11 +74,17 @@ function GoodsNav ({goodsDetail}) {
     <View className='goods-nav-container'>
       <View className='shop'>
         <View className='shop-icon'>
+          <View className='iconfont icon-shop'></View>
         </View>
         <View className='shop-title'>店铺</View>
       </View>
-      <View className='cart'>
-        <View className='cart-icon'></View>
+      <View 
+        className='cart'
+        onClick={gotoCart}
+      >
+        <View className='cart-icon'>
+          <View className='iconfont icon-cart'></View>
+        </View>
         {
           total 
           ? <View className='cart-sign'>{ total }</View>
@@ -85,7 +92,6 @@ function GoodsNav ({goodsDetail}) {
         }
         <View 
           className='cart-title'
-          onClick={gotoCart}
         >购物车</View>
       </View>
       <View className='btn-group'>

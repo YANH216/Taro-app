@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from 'react'
 import MyGoodsList from '../../../components/my_goodsList/my_goodsList'
 import common from '../../../httpCommon/common'
 import _showToast from '../../../util/_showToast'
-import './goods_list.scss'
+import './style/goods_list.scss'
 
 // 定义全局变量
 var pagenum = 1
@@ -32,7 +32,7 @@ function Goods_List () {
 
 
   const reqGoodsList = async (cb) => {
-    let { query, cid, pagesize, total } = cacheRef.current
+    let { query, cid, pagesize } = cacheRef.current
     const res = await common.getGoodsList({ query, cid, pagenum, pagesize })
 
     if (res.meta.status !== 200) 
@@ -72,7 +72,11 @@ function Goods_List () {
   
   return (
     <View className='goods-list'>
-      <MyGoodsList goodsList={goodsList}></MyGoodsList>
+      {
+        (goodsList || []).map(goods => {
+          return <MyGoodsList goods={goods}></MyGoodsList>
+        })
+      }
     </View>
   )
 }

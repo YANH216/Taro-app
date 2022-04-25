@@ -10,7 +10,7 @@ import SearchHistory from './searchHistory/searchHistory'
 import SearchResults from './searchResults/searchResults'
 import common from '../../../httpCommon/common'
 import _showToast from '../../../util/_showToast'
-import './search.scss'
+import './style/search.scss'
 
 function MySearch () {
   // 搜索关键字

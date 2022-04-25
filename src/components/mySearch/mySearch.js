@@ -7,7 +7,7 @@ import Taro from '@tarojs/taro'
 import {
   useReady,
 } from '@tarojs/taro'
-import './mySearch.scss'
+import './style/mySearch.scss'
 
 function MySearch () {
 

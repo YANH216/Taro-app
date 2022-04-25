@@ -4,6 +4,7 @@ const initialState = {
   value: 0
 }
 
+
 const totalSlice = createSlice({
   name: 'total',
   initialState,

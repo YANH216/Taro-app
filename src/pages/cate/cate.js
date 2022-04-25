@@ -8,8 +8,13 @@ import Taro, { useReady } from '@tarojs/taro'
 import { useState } from 'react'
 import MySearch from '../../components/mySearch/mySearch'
 import common from '../../httpCommon/common'
+import { mixin } from '../../mixins/tabbarBadge'
 import _showToast from '../../util/_showToast'
-import './cate.scss'
+import { useDidShow } from '@tarojs/taro';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux'
+import { selectCartList } from '../../redux/feature/cartListSlice'
+import './style/cate.scss'
 
 function Cate () {
   // 当前设备可用高度
@@ -26,6 +31,13 @@ function Cate () {
   
   // 滚动条所在位置
   const [scroll, setScroll] = useState(0)
+
+  // 设置tabbarBadge
+  const cartList = useSelector(selectCartList)
+  const dispatch = useDispatch()
+  useDidShow(() => {
+    mixin(cartList, dispatch)
+  })
 
 
   // 根据所点击的scrollView中的元素 改变状态active的值

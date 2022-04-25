@@ -1,15 +1,18 @@
-import Taro, { useReady } from '@tarojs/taro'
+import Taro, { useDidShow, useReady } from '@tarojs/taro'
 import { 
   Swiper, 
   SwiperItem, 
   Image,
   View,
   Navigator } from '@tarojs/components'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectCartList } from '../../redux/feature/cartListSlice'
 import common from '../../httpCommon/common'
 import _showToast from '../../util/_showToast';
-import './home.scss'
 import MySearch from '../../components/mySearch/mySearch';
+import { mixin } from '../../mixins/tabbarBadge'
+import './style/home.scss'
 
 const Home = () => {
   // 轮播图列表
@@ -26,6 +29,13 @@ const Home = () => {
       })
     }
   }
+
+  const cartList = useSelector(selectCartList)
+  const dispatch = useDispatch()
+
+  useDidShow(() => {
+    mixin(cartList, dispatch)
+  })
 
   useReady(async () => {
     // 发起获取轮播图数据请求
@@ -60,6 +70,7 @@ const Home = () => {
     setFloor(floorData.message)
 
   })
+
 
   return (
     <View>

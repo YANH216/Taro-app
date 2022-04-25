@@ -3,7 +3,7 @@ import {
   Text,
 } from '@tarojs/components'
 import Taro, { useReady } from '@tarojs/taro'
-import './searchResults.scss'
+import './style/searchResults.scss'
 
 function SearchResults ({searchResults}) { 
 

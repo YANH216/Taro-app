@@ -3,7 +3,7 @@ import {
   Text,
 } from '@tarojs/components'
 import Taro, { useReady } from '@tarojs/taro'
-import './searchHistory.scss'
+import './style/searchHistory.scss'
 
 function SearchHistory ({searchHistory, setSearchHistory}) {
   const clear = () => {

@@ -18,11 +18,13 @@
     justify-content: center;
     margin-right: 10px;
     .shop-icon {
-
+      .iconfont {
+        font-size: 48px;
+      }
     }
     
     .shop-title {
-
+      font-size: 24px;
     }
   }
 
@@ -36,7 +38,9 @@
     margin-right: 10px;
     position: relative;
     .cart-icon {
-
+      .iconfont {
+        font-size: 48px;
+      }
     }
     .cart-sign {
       width: 30px;
@@ -53,7 +57,7 @@
     }
 
     .cart-title {
-
+      font-size: 24px;
     }
   }
   .btn-group {

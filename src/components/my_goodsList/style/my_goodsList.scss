@@ -1,0 +1,35 @@
+.goods-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid #efefef;
+  .goods-item-container {
+    display: flex;
+    .goods-item-left {
+      padding: 0 20px;
+      .goods-img {
+        width: 200px;
+        height: 200px;
+        display: block;
+      }
+    }
+    .goods-item-right {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      .goods-name {
+        font-size: 26px;
+      }
+      .goods-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .goods-info-price {
+          font-size: 32px;
+          color: red;
+        }
+      }
+    }
+  }
+}
